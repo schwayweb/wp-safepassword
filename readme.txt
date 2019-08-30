@@ -5,8 +5,8 @@ Tags: safepassword, password, protection, safe password, strong password, 2 fact
 Requires at least: 4.0
 Tested up to: 5.2
 Stable tag: trunk
-License: GPLv3
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This WordPress Plugin will allow you to use the SafePassword authentication system.
 
