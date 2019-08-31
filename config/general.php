@@ -19,8 +19,8 @@ $spcms['support_url']          = 'mailto:'.$spcms['support_email'];
 $spcms['upgrade_url']          = '#';
 $spcms['currency']             = 'USD';
 $spcms['api_url']              = 'https://www.safepassword.live/';
-$spcms['terms_and_conditions'] = 'http://safepassword.net/terms';
-$spcms['credits_costs']        = 'http://safepassword.net/costs';
+$spcms['terms_and_conditions'] = 'https://safepassword.net/terms';
+$spcms['credits_costs']        = 'https://safepassword.net/costs';
 
 // Protection
 $spcms['key_one']        = '616706af5a030c84d2124a63f456319f';

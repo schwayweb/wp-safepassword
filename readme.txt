@@ -3,6 +3,7 @@ Contributors: Schway
 Donate link: https://safepassword.net/
 Tags: safepassword, password, protection, safe password, strong password, 2 factory authentication
 Requires at least: 4.0
+Requires PHP: 5.6
 Tested up to: 5.2
 Stable tag: trunk
 License: GPLv2 or later
@@ -13,6 +14,12 @@ This WordPress Plugin will allow you to use the SafePassword authentication syst
 == Description ==
 
 **WP SafePassword** will allow your wordpress users to authenticate with **SafePassword**.
+
+<blockquote>
+    <p>
+	   <a href="https://safepassword.net/documentation">Documentation</a>
+    </p>
+</blockquote>
 
 <h3>What is SafePassword</h3>
 
@@ -54,6 +61,12 @@ Then click on the Enable button, enter your email, your phone number, select the
 
 == Screenshots ==
 
+1. /assets/screenshot-1.png
+2. /assets/screenshot-2.png
+3. /assets/screenshot-3.png
+
+== Upgrade Notice == 
+=1.0=
 
 == Changelog ==
 
