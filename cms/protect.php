@@ -107,6 +107,14 @@ class spcmsProtect {
         return $this->clean_data($value, $type, $default);
     }
   
+    function globals($data, 
+                     $type = 'text',
+                     $default = ''){
+        $value = $this->filter_globals($data, FILTER_SANITIZE_STRING);
+          
+        return $this->clean_data($value, $type, $default);
+    }
+  
     function cookie($data, 
                     $type = 'text',
                     $default = ''){
@@ -157,6 +165,15 @@ class spcmsProtect {
         }
       
         return $ip;
+    }
+    
+    function filter_globals($value, $filter){
+        
+        if(isset($GLOBALS[$value])) {
+            return filter_var($GLOBALS[$value], $filter);
+        } else {
+            return '';
+        }
     }
     
     function filter_server($value, $filter){

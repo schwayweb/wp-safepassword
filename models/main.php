@@ -36,7 +36,8 @@ class safepwdMain {
                                         "server", 
                                         ['type' => $type]);
         
-        if($result->code == 200 || $result->code == 201) {
+        if($result->code == 200 
+           || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -93,7 +94,8 @@ class safepwdMain {
                                           'referral_id' => $referral_id,
                                           'step' => $step]);
         
-        if($result->code == 200 || $result->code == 201) {
+        if($result->code == 200 
+           || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -208,7 +210,8 @@ class safepwdMain {
                                         ['ip' => $spclasses->main->get_ip_address()], 
                                         ['token' => $token]);
         
-        if($result->code == 200 || $result->code == 201) {
+        if($result->code == 200 
+           || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = $response;
         } else {
@@ -261,7 +264,8 @@ class safepwdMain {
                                           'billed' => $billed], 
                                          ['token' => $token]);
         
-        if($result->code == 200 || $result->code == 201) {
+        if($result->code == 200 
+           || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -331,7 +335,8 @@ class safepwdMain {
                                             'type' => $type], 
                                            ['token' => $token]);
         
-        if($result->code == 200 || $result->code == 201) {
+        if($result->code == 200 
+           || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -400,7 +405,8 @@ class safepwdMain {
                                         ['email_or_phone' => $type == 'email' ? $email:$phone], 
                                         ['token' => $token]);
         
-        if($result->code == 200 || $result->code == 201) {
+        if($result->code == 200 
+           || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             echo $response;
         }
@@ -439,7 +445,8 @@ class safepwdMain {
                                          'link_back' => $link_back], 
                                         ['token' => $token]);
         
-        if($result->code == 200 || $result->code == 201) {
+        if($result->code == 200 
+           || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             echo $response;

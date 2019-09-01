@@ -370,6 +370,7 @@ class spcmsMain {
     }
     
     function is_wplogin(){
+        global $spclasses;
         $is_login_page = false;
 
         $ABSPATH_MY = str_replace(array('\\', '/'), DIRECTORY_SEPARATOR, ABSPATH);
@@ -380,13 +381,11 @@ class spcmsMain {
             $is_login_page = true;
         }
 
-        // $GLOBALS['pagenow'] is equal to "wp-login.php"?
-        if (isset($GLOBALS['pagenow']) && $GLOBALS['pagenow'] === 'wp-login.php') {
+        if ($spclasses->protect->globals('pagenow') === 'wp-login.php') {
             $is_login_page = true;
         }
 
-        // $_SERVER['PHP_SELF'] is equal to "/wp-login.php"?
-        if ($_SERVER['PHP_SELF'] == '/wp-login.php') {
+        if ($spclasses->protect->server('PHP_SELF') == '/wp-login.php') {
             $is_login_page = true;
         }
 
@@ -394,6 +393,7 @@ class spcmsMain {
     }
     
     function is_wp_profile(){
+        global $spclasses;
         $is_profile_page = false;
 
         $ABSPATH_MY = str_replace(array('\\', '/'), DIRECTORY_SEPARATOR, ABSPATH);
@@ -403,13 +403,11 @@ class spcmsMain {
             $is_profile_page = true;
         }
 
-        // $GLOBALS['pagenow'] is equal to "profile.php"?
-        if (isset($GLOBALS['pagenow']) && $GLOBALS['pagenow'] === 'profile.php') {
+        if ($spclasses->protect->globals('pagenow') === 'profile.php') {
             $is_profile_page = true;
         }
         
-        // $_SERVER['PHP_SELF'] is equal to "/wp-admin/profile.php"?
-        if ($_SERVER['PHP_SELF'] == '/wp-admin/profile.php') {
+        if ($spclasses->protect->server('PHP_SELF') == '/wp-admin/profile.php') {
             $is_profile_page = true;
         }
 
