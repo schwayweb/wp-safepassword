@@ -253,20 +253,15 @@ class spcmsMain {
                         && $server != '') {
                         $spcms['api_url'] = str_replace('www', $server, $spcms['api_url']);
                     }
+        
+                    $result = $spclasses->http->post($spcms['api_url'], 
+                                                    "login", 
+                                                    ['email' => $email,
+                                                     'safepassword' => $password], 
+                                                    ['token' => $token]);
 
-                    // Get Token
-                    $api = new $spsafepwd->http([
-                      'base_url' => $spcms['api_url'], 
-                      'format' => "json",
-                      'headers' => ['token' => $token]
-                    ]);
-
-                    $result = $api->post("login",
-                                        ['email' => $email,
-                                         'safepassword' => $password]);
-
-                    if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-                      || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+                    if($result->code == 200 
+                        || $result->code == 201) {
                         $response = $spclasses->protect->data($result->response, 'json');
                         $data     = json_decode($response);
 
