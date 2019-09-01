@@ -41,7 +41,7 @@ class spcmsLanguage {
             $language = $user_language;
         }
         
-        // GET language
+        // language
         $get_language = $spclasses->protect->get('lang');
         
         if(trim($get_language) != "") {
@@ -76,7 +76,7 @@ class spcmsLanguage {
             $language = $spcms['shortcode_language'];
         }
         
-        // GET language
+        //  language
         $bec_language = $spclasses->protect->get('bec_lang');
         
         if(trim($bec_language) != "") {
