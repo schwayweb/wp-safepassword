@@ -40,12 +40,6 @@ class spcmsMain {
 
                 // Get SafePassword
                 add_action('login_form', array(&$this, 'getSafePassword'));
-              
-                // Plugin Url
-                $spcms['plugin_url'] = plugin_dir_url(__FILE__);
-               
-                // Plugin path/
-                $spcms['plugin_path'] = plugin_dir_path(__FILE__);
                 
                 // Redirect after plugin is activated
                 add_action('admin_init', array(&$this, 'wpSafePasswordToConnect'));

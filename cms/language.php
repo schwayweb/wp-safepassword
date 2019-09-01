@@ -26,7 +26,7 @@ class spcmsLanguage {
         global $spcms;
         global $spclasses;
         global $splanguages;
-        $language_path = plugin_dir_path(__FILE__).'languages/';
+        $language_path = $spcms['plugin_path'].'languages/';
         
         // Config
         $language = $spcms['language'];
