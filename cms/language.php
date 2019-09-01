@@ -26,7 +26,7 @@ class spcmsLanguage {
         global $spcms;
         global $spclasses;
         global $splanguages;
-        $language_path = defined('WP_CONTENT_DIR') ? WP_CONTENT_DIR.'/plugins/wp-safepassword/languages/':ABSPATH.'/wp-content/plugins/wp-safepassword/languages/';
+        $language_path = plugin_dir_path(__FILE__).'languages/';
         
         // Config
         $language = $spcms['language'];
@@ -41,7 +41,7 @@ class spcmsLanguage {
             $language = $user_language;
         }
         
-        // $_GET language
+        // GET language
         $get_language = $spclasses->protect->get('lang');
         
         if(trim($get_language) != "") {
@@ -76,7 +76,7 @@ class spcmsLanguage {
             $language = $spcms['shortcode_language'];
         }
         
-        // $_GET language
+        // GET language
         $bec_language = $spclasses->protect->get('bec_lang');
         
         if(trim($bec_language) != "") {

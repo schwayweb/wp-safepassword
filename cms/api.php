@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Create API for network
+ * Create API
  */
 class spcmsApi {
   

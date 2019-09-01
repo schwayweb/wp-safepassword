@@ -31,18 +31,12 @@ class safepwdMain {
             $retData['data'] = 'Error: Wrong type.';
             exit;
         }
-
-        // Get Token
-        $api = new $spsafepwd->http([
-          'base_url' => $spcms['api_url'], 
-          'format' => "json"
-        ]);
-
-        $result = $api->post("server",
-                             ['type' => $type]);
         
-        if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-          || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+        $result = $spclasses->http->get($spcms['api_url'], 
+                                        "server", 
+                                        ['type' => $type]);
+        
+        if($result->code == 200 || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -91,21 +85,15 @@ class safepwdMain {
             $retData['data'] = 'Wrong email. Please complete the email field.';
             exit;
         }
-
-        // Get Token
-        $api = new $spsafepwd->http([
-          'base_url' => $spcms['api_url'], 
-          'format' => "json"
-        ]);
-
-        $result = $api->post("connect",
-                             ['email' => $email,
-                              'website' => $website,
-                              'referral_id' => $referral_id,
-                              'step' => $step]);
         
-        if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-          || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+        $result = $spclasses->http->post($spcms['api_url'], 
+                                         "connect", 
+                                         ['email' => $email,
+                                          'website' => $website,
+                                          'referral_id' => $referral_id,
+                                          'step' => $step]);
+        
+        if($result->code == 200 || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -214,19 +202,13 @@ class safepwdMain {
             && $server != '') {
             $spcms['api_url'] = str_replace('www', $server, $spcms['api_url']);
         }
-
-        // Get Token
-        $api = new $spsafepwd->http([
-          'base_url' => $spcms['api_url'], 
-          'format' => "json",
-          'headers' => ['token' => $token]
-        ]);
-
-        $result = $api->get("ip",
-                            ['ip' => $spclasses->main->get_ip_address()]);
         
-        if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-          || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+        $result = $spclasses->http->get($spcms['api_url'], 
+                                        "ip", 
+                                        ['ip' => $spclasses->main->get_ip_address()], 
+                                        ['token' => $token]);
+        
+        if($result->code == 200 || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = $response;
         } else {
@@ -267,25 +249,19 @@ class safepwdMain {
             && $server != '') {
             $spcms['api_url'] = str_replace('www', $server, $spcms['api_url']);
         }
-     
-        // Get Token
-        $api = new $spsafepwd->http([
-          'base_url' => $spcms['api_url'], 
-          'format' => "json",
-          'headers' => ['token' => $token]
-        ]);
         
-        $result = $api->post("register",
-                            ['email' => $email, 
-                             'phone' => $phone, 
-                             'user_id' => $user_id, 
-                             'type' => $type, 
-                             'paid' => $paid, 
-                             'link_back' => $link_back, 
-                             'billed' => $billed]);
+        $result = $spclasses->http->post($spcms['api_url'], 
+                                         "register", 
+                                         ['email' => $email, 
+                                          'phone' => $phone, 
+                                          'user_id' => $user_id, 
+                                          'type' => $type, 
+                                          'paid' => $paid, 
+                                          'link_back' => $link_back, 
+                                          'billed' => $billed], 
+                                         ['token' => $token]);
         
-        if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-          || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+        if($result->code == 200 || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -346,22 +322,16 @@ class safepwdMain {
             && $server != '') {
             $spcms['api_url'] = str_replace('www', $server, $spcms['api_url']);
         }
-     
-        // Get Token
-        $api = new $spsafepwd->http([
-          'base_url' => $spcms['api_url'], 
-          'format' => "json",
-          'headers' => ['token' => $token]
-        ]);
         
-        $result = $api->delete("register",
-                               json_encode(['email' => $email, 
+        $result = $spclasses->http->delete($spcms['api_url'], 
+                                           "register", 
+                                           ['email' => $email, 
                                             'phone' => $phone, 
                                             'user_id' => $user_id, 
-                                            'type' => $type]));
+                                            'type' => $type], 
+                                           ['token' => $token]);
         
-        if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-          || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+        if($result->code == 200 || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             
@@ -424,19 +394,13 @@ class safepwdMain {
             && $server != '') {
             $spcms['api_url'] = str_replace('www', $server, $spcms['api_url']);
         }
-     
-        // Get Token
-        $api = new $spsafepwd->http([
-          'base_url' => $spcms['api_url'], 
-          'format' => "json",
-          'headers' => ['token' => $token]
-        ]);
         
-        $result = $api->post("safepassword",
-                            ['email_or_phone' => $type == 'email' ? $email:$phone]);
+        $result = $spclasses->http->post($spcms['api_url'], 
+                                        "safepassword", 
+                                        ['email_or_phone' => $type == 'email' ? $email:$phone], 
+                                        ['token' => $token]);
         
-        if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-          || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+        if($result->code == 200 || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             echo $response;
         }
@@ -467,21 +431,15 @@ class safepwdMain {
             && $server != '') {
             $spcms['api_url'] = str_replace('www', $server, $spcms['api_url']);
         }
-     
-        // Get Token
-        $api = new $spsafepwd->http([
-          'base_url' => $spcms['api_url'], 
-          'format' => "json",
-          'headers' => ['token' => $token]
-        ]);
         
-        $result = $api->post("recharge",
-                            ['user_id' => $user_id, 
-                             'type' => $type, 
-                             'link_back' => $link_back]);
+        $result = $spclasses->http->post($spcms['api_url'], 
+                                        "recharge", 
+                                        ['user_id' => $user_id, 
+                                         'type' => $type, 
+                                         'link_back' => $link_back], 
+                                        ['token' => $token]);
         
-        if($result->response_status_lines[0] == 'HTTP/1.1 201 Created' || $result->response_status_lines[0] == 'HTTP/1.1 200 OK'
-          || (isset($result->response_status_lines[1]) && ($result->response_status_lines[1] == 'HTTP/1.1 201 Created' || $result->response_status_lines[1] == 'HTTP/1.1 200 OK'))) {
+        if($result->code == 200 || $result->code == 201) {
             $response = $spclasses->protect->data($result->response, 'json');
             $data = json_decode($response);
             echo $response;

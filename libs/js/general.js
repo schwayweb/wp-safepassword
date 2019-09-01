@@ -18,22 +18,6 @@ Date.prototype.getWeeks = function() {
   return week;
 };
 
-/* $_GET */
-var $_GET = function(param) {
-	var vars = {};
-	window.location.href.replace( location.hash, '' ).replace( 
-		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
-		function( m, key, value ) { // callback
-			vars[key] = value !== undefined ? value : '';
-		}
-	);
-
-	if ( param ) {
-		return vars[param] ? vars[param] : null;	
-	}
-	return vars;
-};
-
 if (!Object.assign) {
   Object.defineProperty(Object, 'assign', {
     enumerable: false,

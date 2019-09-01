@@ -31,7 +31,7 @@
       }
     },
     start: function(){
-      var status = $_GET('safepassword-status');    
+      var status = spsafepwd["status"] !== undefined ? spsafepwd["status"]:'';    
       
       if(status === 'cancel') {
           var warningMessage = new Array();

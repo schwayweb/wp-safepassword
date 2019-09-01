@@ -34,12 +34,6 @@ include_once 'config/requests.php';
 // Load Config Resources
 include_once 'config/resources.php';
 
-/*
- * Libraries
- */
-include_once 'libs/php/restclient/restclient.php';
-$spsafepwd->http = class_exists('RestClient') ? new RestClient():'Class does not exist!';
-
 
 /*
  * Models

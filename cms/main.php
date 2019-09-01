@@ -42,10 +42,10 @@ class spcmsMain {
                 add_action('login_form', array(&$this, 'getSafePassword'));
               
                 // Plugin Url
-                $spcms['plugin_url'] = defined('WP_CONTENT_URL') ? WP_CONTENT_URL.'/plugins/wp-safepassword/':'';
+                $spcms['plugin_url'] = plugin_dir_url(__FILE__);
                
                 // Plugin path/
-                $spcms['plugin_path'] = defined('WP_CONTENT_DIR') ? WP_CONTENT_DIR.'/plugins/wp-safepassword/':ABSPATH.'/wp-content/plugins/wp-safepassword/';
+                $spcms['plugin_path'] = plugin_dir_path(__FILE__);
                 
                 // Redirect after plugin is activated
                 add_action('admin_init', array(&$this, 'wpSafePasswordToConnect'));

@@ -198,6 +198,11 @@ class spcmsResources {
       
             // Owner Data
             $server = $spclasses->option->get('server');
+            $status = $spclasses->protect->get('safepwd-status');
+            
+            if($status == '') {
+                $status = $spclasses->protect->get('safepassword-status');
+            }
           
             if(isset($server) 
                && $server != '') {
@@ -230,6 +235,7 @@ class spcmsResources {
             array_push($js_html,   'var spsafepwd = [];');
             array_push($js_html,   '    spsafepwd["page"] = "'.$spcms['page'].'";');
             array_push($js_html,   '    spsafepwd["server"] = "'.$server.'";');
+            array_push($js_html,   '    spsafepwd["status"] = "'.$status.'";');
             array_push($js_html,   '    spsafepwd["api_url"] = "'.$spcms['api_url'].'";');
             array_push($js_html,   '    spsafepwd["type"] = "'.$spcms['type'].'";');
             array_push($js_html,   '    spsafepwd["role"] = "'.$spcms['role'].'";');

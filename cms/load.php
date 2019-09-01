@@ -9,6 +9,7 @@ $spclasses = new stdClass;
 /*
  *  Include CMS Files
  */ 
+include_once 'http.php';
 include_once 'protect.php';
 include_once 'installation.php';  
 include_once 'database.php';
@@ -29,6 +30,7 @@ include_once 'main.php';
  *  Start Extensions Main
  */ 
 
+$spclasses->http         = class_exists('spcmsHTTP') ? new spcmsHTTP():'Class does not exist!';
 $spclasses->protect      = class_exists('spcmsProtect') ? new spcmsProtect():'Class does not exist!';
 $spclasses->installation = class_exists('spcmsInstallation') ? new spcmsInstallation():'Class does not exist!';
 $spclasses->db           = class_exists('spcmsDatabase') ? new spcmsDatabase():'Class does not exist!';

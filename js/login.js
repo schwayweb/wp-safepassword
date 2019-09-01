@@ -31,7 +31,7 @@
       }
     },
     start: function(){
-      var status = $_GET('safepwd-status');    
+      var status = spsafepwd["status"] !== undefined ? spsafepwd["status"]:'';    
       
       if(status === 'cancel') {
           var warningMessage = new Array();
