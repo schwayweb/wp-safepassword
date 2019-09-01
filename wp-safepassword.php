@@ -16,13 +16,11 @@ $spsafepwd = new stdClass;
 // Plugin Url
 $spcms['plugin_url'] = plugin_dir_url(__FILE__);
 
-// Plugin path/
+// Plugin path
 $spcms['plugin_path'] = plugin_dir_path(__FILE__);
 
 // Redirect after plugin is activated
 register_activation_hook(__FILE__, 'wpSafepasswordActivate');
-
-$spcms['plugin_url'] = plugin_dir_url(__FILE__);
 
 /*
  * Config
