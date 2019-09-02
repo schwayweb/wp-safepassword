@@ -15,7 +15,8 @@ class spcmsHTTP {
         $body = array();
         
         $args = array(
-            'method' => 'GET'
+            'method' => 'GET',
+            'headers' => $headers
         );
         
         $response = wp_remote_request( $url, $args );
