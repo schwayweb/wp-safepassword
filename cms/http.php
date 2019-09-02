@@ -22,8 +22,7 @@ class spcmsHTTP {
           && isset($headers['token'])) {
             $reqHeaders = array(
                 'Authorization' => 'Bearer ' . $headers['token'],
-                'Accept'        => 'application/json;ver=1.0',
-                'Content-Type'  => 'application/json; charset=UTF-8',
+                'Content-type' => 'application/x-www-form-urlencoded',
                 'Host'          => site_url()
             );
             
@@ -46,8 +45,7 @@ class spcmsHTTP {
           && isset($headers['token'])) {
             $reqHeaders = array(
                 'Authorization' => 'Bearer ' . $headers['token'],
-//                'Accept'        => 'application/json;ver=1.0',
-//                'Content-Type'  => 'application/json; charset=UTF-8',
+                'Content-type' => 'application/x-www-form-urlencoded',
                 'Host'          => site_url()
             );
             
@@ -70,6 +68,7 @@ class spcmsHTTP {
           && isset($headers['token'])) {
             $reqHeaders = array(
                 'Authorization' => 'Bearer ' . $headers['token'],
+                'Content-type' => 'application/x-www-form-urlencoded',
                 'Host'          => site_url()
             );
             
@@ -92,6 +91,7 @@ class spcmsHTTP {
           && isset($headers['token'])) {
             $reqHeaders = array(
                 'Authorization' => 'Bearer ' . $headers['token'],
+                'Content-type' => 'application/x-www-form-urlencoded',
                 'Host'          => site_url()
             );
             
