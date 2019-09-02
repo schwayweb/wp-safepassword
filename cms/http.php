@@ -36,7 +36,7 @@ class spcmsHTTP {
     }
     
     function post($url, $path, $fields = array(), $headers = array()){
-        $fields = json_encode($args);
+        $fields = json_encode($fields);
         $url = $url.$path;
         $args = array(
             'method' => 'POST',
@@ -61,7 +61,7 @@ class spcmsHTTP {
     }
     
     function put($url, $path, $fields = array(), $headers = array()){
-        $fields = json_encode($args);
+        $fields = json_encode($fields);
         $url = $url.$path;
         $args = array(
             'method' => 'PUT',
@@ -86,7 +86,7 @@ class spcmsHTTP {
     }
     
     function delete($url, $path, $fields = array(), $headers = array()){
-        $fields = json_encode($args);
+        $fields = json_encode($fields);
         $url = $url.$path;
         $args = array(
             'method' => 'DELETE',
