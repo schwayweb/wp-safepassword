@@ -179,31 +179,8 @@ var placeSearch,
                         case "hidden":
                           HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'" type="hidden" '+(data['modify'] !== undefined ? 'onchange="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onkeyup="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onblur="'+data['modify']+'"':'')+' value="'+data['value']+'" />');
                           break;
-                        case "image":
-                          HTML.push('   <input id="safepwd-image-upload" '+(data['modify'] !== undefined ? 'data-modify="'+data['modify']+'"':'')+' type="file" style="width: 60%;overflow: hidden;" />');
-                          HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'" type="hidden" class="safepwd-image-upload-data" '+(data['modify'] !== undefined ? 'onchange="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onkeyup="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onblur="'+data['modify']+'"':'')+' />');
-                          HTML.push('   <div class="wdh-box-full-full safepwd-image-upload-preview-box">');
-                          HTML.push('     <img style="max-height:80px;" '+(data['value'] !== undefined && data['value'] !== '' ? 'src="'+data['value']+'"':'')+' class="safepwd-image-upload-preview">');
-                          HTML.push('   </div>');
-                          break;
                         case "button":
                           HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'" class="safepwd-button" type="button" value="'+data['label']+'" onclick="javascript:'+data['action']+'" />');
-                          break;
-                        case "map":
-                        
-                          if(data['value'] !== undefined
-                            && data['value'] !== '') {
-                              data['value']['latitude'] = data['value']['lat'];
-                              data['value']['longitude'] = data['value']['lng'];
-                              data['value']['address'] = data['value']['name'];
-                              var tempLocation = JSON.stringify(data['value']),
-                                  tempLocationName = data['value']['name'];
-
-                              window.wdhMapDataLocation = data['value'];
-                          }
-                          
-                          HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'-map" '+(data['max_chars'] > 0 ? ' maxlength="'+data['max_chars']+'"':'')+' '+(data['modify'] !== undefined ? 'onchange="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onkeyup="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onblur="'+data['modify']+'"':'')+' type="text" class="safepwd-input safepwd-map '+data['input_class']+'" placeholder="'+data['placeholder']+'" value="'+(tempLocationName !== undefined ? tempLocationName:'')+'" />');
-                          HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'" type="hidden" value="'+(tempLocation !== undefined ? tempLocation:'')+'" />');
                           break;
                         case "switch":
                           HTML.push('   <label id="safepwd-form-'+formName+'-'+data['name']+'-switch" class="safepwd-switch">');
@@ -286,16 +263,6 @@ var placeSearch,
                           break;
                         case "button":
                           HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'" class="safepwd-button" type="button" value="'+data['label']+'" onclick="javascript:'+data['action']+'" />');
-                          break;
-                        case "map":
-                          HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'" '+(data['max_chars'] > 0 ? ' maxlength="'+data['max_chars']+'"':'')+' type="text" '+(data['modify'] !== undefined ? 'onchange="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onkeyup="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onblur="'+data['modify']+'"':'')+' class="safepwd-input safepwd-map '+data['input_class']+'" placeholder="'+data['placeholder']+'" value="'+data['value']+'" />');
-                          break;
-                        case "image":
-                          HTML.push('   <input id="safepwd-image-upload" type="file" style="width: 60%;overflow: hidden;" />');
-                          HTML.push('   <input id="safepwd-form-'+formName+'-'+data['name']+'" type="hidden" class="safepwd-image-upload-data" '+(data['modify'] !== undefined ? 'onchange="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onkeyup="'+data['modify']+'"':'')+' '+(data['modify'] !== undefined ? 'onblur="'+data['modify']+'"':'')+' />');
-                          HTML.push('   <div class="wdh-box-full-full safepwd-image-upload-preview-box">');
-                          HTML.push('     <img style="max-height:80px;" '+(data['value'] !== undefined && data['value'] !== '' ? 'src="'+data['value']+'"':'')+' class="safepwd-image-upload-preview">');
-                          HTML.push('   </div>');
                           break;
                         case "switch":
                           HTML.push('   <label id="safepwd-form-'+formName+'-'+data['name']+'-switch" class="safepwd-switch">');
@@ -383,132 +350,6 @@ var placeSearch,
                   }
                 
                   return HTML.join('');
-              },
-              map: function(){
-                  var mapinputID = $('.safepwd-map').attr('id');
-                  
-                  if(mapinputID !== undefined) {
-                      autocomplete = new google.maps.places.Autocomplete(document.getElementById(mapinputID), {
-                          types: []
-                      });
-//                           types: ['(cities)']
-                    
-
-                      google.maps.event.addListener(autocomplete, 'place_changed', function () {
-                          var place = autocomplete.getPlace();
-                          
-                          if(place !== undefined) {
-                              var address = place.formatted_address,
-                                  latitude = place.geometry.location.lat(),
-                                  longitude = place.geometry.location.lng(),
-                                  tempData = {},
-                                  mapinputSaveDataID = mapinputID.split('-map')[0];
-                            
-                              // Get Country & State
-                              for(var key in place.address_components){
-                                  
-                                  if($.inArray('country', place.address_components[key]['types']) > -1){
-                                      tempData['country'] = place.address_components[key]['short_name'];
-                                      tempData['country_long'] = place.address_components[key]['long_name'];
-                                  }
-                                  
-                                  if($.inArray('administrative_area_level_1', place.address_components[key]['types']) > -1){
-                                      tempData['state'] = place.address_components[key]['short_name'];
-                                      tempData['state_long'] = place.address_components[key]['long_name'];
-                                  }
-                                  
-                                  if($.inArray('administrative_area_level_2', place.address_components[key]['types']) > -1){
-                                      tempData['city'] = place.address_components[key]['short_name'];
-                                      tempData['city_long'] = place.address_components[key]['short_name'];
-                                  }
-                                  
-                                  if($.inArray('route', place.address_components[key]['types']) > -1){
-                                      tempData['street'] = place.address_components[key]['short_name'];
-                                  }
-                                  
-                                  if($.inArray('street_number', place.address_components[key]['types']) > -1){
-                                      tempData['street_no'] = place.address_components[key]['long_name'];
-                                  }
-                                  
-                                  if($.inArray('postal_code', place.address_components[key]['types']) > -1){
-                                      tempData['postal_code'] = place.address_components[key]['long_name'];
-                                  }
-                              }
-                            
-                              tempData['address'] = address;
-                              tempData['latitude'] = latitude;
-                              tempData['longitude'] = longitude;
-                            
-                              window.wdhMapDataLocation = tempData;
-                            
-                              tempData = JSON.stringify(tempData);
-                            
-                              $.ajax({
-                                 url:"https://maps.googleapis.com/maps/api/timezone/json?key="+spsafepwd["google_map_api_key"]+"&location="+latitude+","+longitude+"&timestamp="+(Math.round((new Date().getTime())/1000)).toString()+"&sensor=false",
-                              }).done(function(response){
-                                  
-                                 if(response.timeZoneId != null){
-                                    //do something
-                                    var hour=(response.rawOffset)/60;
-                                    window.wdhMapDataLocation['timezone'] = response.timeZoneId;
-                            
-                                    $('#'+mapinputSaveDataID).val(JSON.stringify(window.wdhMapDataLocation));
-                                 }
-                              });
-                            
-                              $('#'+mapinputSaveDataID).val(JSON.stringify(window.wdhMapDataLocation));
-                          }
-                      });
-                  }
-              },
-              image: function(data) {
-                var files = data.target.files;
-  
-                if (files && files[0]) {
-
-                  var FR = new FileReader(),
-                      image  = new Image();
-                  window.safepwdImageFile = files[0];
-                  
-                  FR.addEventListener("load", function(e) {
-                    var tempData64 = e.target.result;
-                    $('.safepwd-image-upload-preview').attr('src', tempData64);
-                    var tempImage = new Image(),
-                        tempSize = Math.round(window.safepwdImageFile.size/(1024));
-                        tempImage.src = tempData64;
-                    
-                    
-                    if(tempSize <= 500) { // Maximum 500KB
-                    
-                        if ( (/\.(png|jpeg|jpg)$/i).test(window.safepwdImageFile.name) ) {
-
-                            tempImage.onload = function() {
-
-                                if(this.width >= 1024 &&
-                                   this.height >= 685){
-                                    $('.safepwd-image-upload-preview-box').removeClass('safepwd-invisible');
-                                    $('.safepwd-image-upload-data').val(tempData64);
-                                    
-                                    var dataChange = $('#safepwd-image-upload').attr('data-modify');
-                                    window.safepwdSelectedValue = tempData64; 
-                                    eval(dataChange);
-                                } else {
-                                   alert(sptext['error_cover_size']);
-                                }
-                            };
-                        } else {
-                            alert(sptext['error_cover_extensions']);
-                        }
-                    } else {
-                        alert(sptext['error_cover_file_size']);
-                    }
-                    
-                    
-                  }); 
-
-                  FR.readAsDataURL( this.files[0] );
-                }
-
               },
               option:{
                  name: function(value, options){
@@ -733,12 +574,6 @@ var placeSearch,
                     
                       $(this).addClass('safepwd-selected');
                   });
-                  
-                  // Map
-                  spsafepwdForm.fields.field.map();
-                  
-                  // Image
-                  $('#safepwd-image-upload').on("change", spsafepwdForm.fields.field.image);
                 
                   // Datepicker
                   if($('input').hasClass('safepwd-date')) {
