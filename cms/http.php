@@ -9,15 +9,26 @@ class spcmsHTTP {
     }
     
     function get($url, $path, $fields = array(), $headers = array()){
-        $options = !empty($fields) ? http_build_query($fields):'';
-        $url = $url.$path.'/'.$options;
+        $url = $url.$path;
+        $url = add_query_arg($fields, $url);
         
         $body = array();
         
         $args = array(
-            'method' => 'GET',
-            'headers' => $headers
+            'method' => 'GET'
         );
+        
+        if(!empty($headers)
+          && isset($headers['token'])) {
+            $reqHeaders = array(
+                'Authorization' => 'Bearer ' . $headers['token'],
+                'Accept'        => 'application/json;ver=1.0',
+                'Content-Type'  => 'application/json; charset=UTF-8',
+                'Host'          => site_url()
+            );
+            
+            $args['headers'] = $reqHeaders;
+        }
         
         $response = wp_remote_request( $url, $args );
         
@@ -25,12 +36,24 @@ class spcmsHTTP {
     }
     
     function post($url, $path, $fields = array(), $headers = array()){
+        $fields = json_encode($args);
         $url = $url.$path;
         $args = array(
             'method' => 'POST',
-            'body' => $fields,
-            'headers' => $headers
+            'body' => $fields
         );
+        
+        if(!empty($headers)
+          && isset($headers['token'])) {
+            $reqHeaders = array(
+                'Authorization' => 'Bearer ' . $headers['token'],
+                'Accept'        => 'application/json;ver=1.0',
+                'Content-Type'  => 'application/json; charset=UTF-8',
+                'Host'          => site_url()
+            );
+            
+            $args['headers'] = $reqHeaders;
+        }
         
         $response = wp_remote_request( $url, $args );
         
@@ -38,12 +61,24 @@ class spcmsHTTP {
     }
     
     function put($url, $path, $fields = array(), $headers = array()){
+        $fields = json_encode($args);
         $url = $url.$path;
         $args = array(
             'method' => 'PUT',
-            'body' => $fields,
-            'headers' => $headers
+            'body' => $fields
         );
+        
+        if(!empty($headers)
+          && isset($headers['token'])) {
+            $reqHeaders = array(
+                'Authorization' => 'Bearer ' . $headers['token'],
+                'Accept'        => 'application/json;ver=1.0',
+                'Content-Type'  => 'application/json; charset=UTF-8',
+                'Host'          => site_url()
+            );
+            
+            $args['headers'] = $reqHeaders;
+        }
         
         $response = wp_remote_request( $url, $args );
         
@@ -51,12 +86,24 @@ class spcmsHTTP {
     }
     
     function delete($url, $path, $fields = array(), $headers = array()){
+        $fields = json_encode($args);
         $url = $url.$path;
         $args = array(
             'method' => 'DELETE',
-            'body' => $fields,
-            'headers' => $headers
+            'body' => $fields
         );
+        
+        if(!empty($headers)
+          && isset($headers['token'])) {
+            $reqHeaders = array(
+                'Authorization' => 'Bearer ' . $headers['token'],
+                'Accept'        => 'application/json;ver=1.0',
+                'Content-Type'  => 'application/json; charset=UTF-8',
+                'Host'          => site_url()
+            );
+            
+            $args['headers'] = $reqHeaders;
+        }
         
         $response = wp_remote_request( $url, $args );
         
