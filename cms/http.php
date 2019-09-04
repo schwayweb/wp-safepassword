@@ -84,14 +84,14 @@ class spcmsHTTP {
         $url = $url.$path;
         $args = array(
             'method' => 'DELETE',
-            'body' => $fields
+            'body' => json_encode($fields)
         );
         
         if(!empty($headers)
           && isset($headers['token'])) {
             $reqHeaders = array(
                 'Authorization' => 'Bearer ' . $headers['token'],
-                'Content-type' => 'application/x-www-form-urlencoded',
+                'Content-type' => 'application/json',
                 'Host'          => site_url()
             );
             
