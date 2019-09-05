@@ -13,8 +13,8 @@ This WordPress Plugin will allow you to use the SafePassword authentication syst
 
 == Description ==
 
-**WP SafePassword** will allow your wordpress users to authenticate with **SafePassword.net**</a>.
-<a href="https://safepassword.net">SafePassword.net</a> is a service that protect your website users.
+**WP SafePassword** will allow your wordpress users to authenticate with **SafePassword**.
+<a href="https://safepassword.net">SafePassword</a> is a service that protect your website users.
 Practically if you will connect your website to this service your users will not need anymore a password for their accounts.
 They will receive a temporary password on own phone/email when they want to authenticate.
 
