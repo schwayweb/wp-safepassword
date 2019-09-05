@@ -4,8 +4,8 @@
 
 <a href="https://safepassword.net">SafePassword</a> is a service that protect your website users.
 
-Practically if you will connect your website to this service your users will not need anymore a password for their accounts.( only if enable Login with SafePassword option )
-They will receive a temporary password on own phone/email when they want to authenticate.
+Practically if you will connect your website to this service your users will not need anymore a password for their accounts.
+They will receive a temporary password on own phone/email when they want to authenticate.(only if they enable 'Login with SafePassword' option)
 
 Each user can **enable/disable** this service from **wp-admin -> Profile page -> 'Login with SafePassword'** section.
 
