@@ -7,6 +7,8 @@
 Practically if you will connect your website to this service your users will not need anymore a password for their accounts.
 They will receive a temporary password on own phone/email when they want to authenticate.
 
+Each user can **enable/disable** this service from **wp-admin -> Profile page -> 'Login with SafePassword'** section.
+
 **Attention !** For using this plugin you must be agree with <a href="https://safepassword.net/tos-for-users">SafePassword's terms of service</a>. ( including <a href="https://safepassword.net/privacy">Privacy Policy</a> ).
 
 <h3>What is SafePassword</h3>
