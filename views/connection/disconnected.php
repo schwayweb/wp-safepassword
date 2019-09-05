@@ -16,6 +16,6 @@ $website = $spcms['website_full'];
   <input type="text" id="safepwd-connection-email" class="safepwd-field" placeholder="Your email" value="<?php echo $email; ?>">
   <input type="text" id="safepwd-connection-referral-id" class="safepwd-field safepwd-sp-v2" placeholder="Referral ID (optional)" value="">
   <input type="hidden" id="safepwd-connection-website" class="safepwd-field" value="<?php echo $website; ?>">
-  <input type="checkbox" id="safepwd-terms-and-conditions">   <span><?php echo $sptext['i_m_agree']; ?></span>
+  <input type="checkbox" id="safepwd-terms-and-conditions">   <span><?php echo $sptext['i_m_agree_websites']; ?></span>
   <input type="button" class="safepwd-button safepwd-connect safepwd-half" value="Connect" onclick="javascript:spsafepwdConnection.connect('1');">
 </div>
