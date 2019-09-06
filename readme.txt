@@ -1,7 +1,7 @@
-=== WP SafePassword  ===
+=== WP SafePassword - Login with a temporary safe password ===
 Contributors: Schway
 Donate link: https://safepassword.net/
-Tags: safepassword, password, protection, safe password, strong password, 2 factory authentication
+Tags: safepassword, password, protection, safe password, strong password, 2 factory authentication, temporary password, developer access, admin login, temporary login, passwordless login, customer login, secure login, access, admin, log in, login, login security, protection, user login, user login, wordpress admin login, wordpress login, wp-admin, wp-login, password expiration, login, Login Without Password, Login With SafePassword, user, WordPress Admin, wp-admin, developer login
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.2
@@ -14,7 +14,7 @@ This WordPress Plugin will allow you to use the SafePassword authentication syst
 == Description ==
 
 **WP SafePassword** will allow your wordpress users to authenticate with **SafePassword**.
-<a href="https://safepassword.net">SafePassword</a> is a service that protect your website users.
+<a href="https://safepassword.net">SafePassword</a> is a FREE service that protect your website users.
 
 Practically if you will connect your website to this service your users will not need anymore a password for their accounts.
 They will receive a temporary password on own phone/email when they want to authenticate.(only if they enable 'Login with SafePassword' option)
@@ -72,6 +72,7 @@ Then click on the Enable button, enter your email, your phone number, select the
 1. /assets/screenshot-1.png
 2. /assets/screenshot-2.png
 3. /assets/screenshot-3.png
+3. /assets/screenshot-4.png
 
 == Upgrade Notice == 
 =1.0=
