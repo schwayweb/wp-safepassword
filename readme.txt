@@ -9,7 +9,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Every time a user want to login he will receive a temporary safe password on own phone/email.
+Every time a user want to login he will receive a temporary password on phone/email.
 If a hacker is trying to crack a password is blocked.
 
 == Description ==
