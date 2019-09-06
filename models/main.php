@@ -32,8 +32,8 @@ class safepwdMain {
             exit;
         }
         
-        $result = $spclasses->http->get($spcms['api_url'], 
-                                        "server", 
+        $result = $spclasses->http->post($spcms['api_url'], 
+                                         "server", 
                                         ['type' => $type]);
         
         if($result->code == 200 
