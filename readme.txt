@@ -9,7 +9,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-SafePassword is WordPress plugin which protect your website users & admins by hackers against bruteforce attacks.
+SafePassword is WordPress plugin which secure login and protect your website users & admins by hackers against bruteforce attacks.
 
 == Description ==
 
