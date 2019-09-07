@@ -14,7 +14,7 @@ SafePassword is WordPress plugin which secure login and protect your website use
 == Description ==
 
 **WordPress User Login Security** will allow your WordPress users and admins to authenticate with **SafePassword.net** service.
-<a href="https://safepassword.net">SafePassword.net</a> is a FREE website security service that protect your website users and admins by hackers against bruteforce attacks.
+<a href="https://safepassword.net">SafePassword.net</a> is a **FREE website security service that protect your website users and admins by hackers against bruteforce attacks**.
 
 
 <h3>Protected and easy to use</h3>
@@ -28,10 +28,21 @@ SafePassword is WordPress plugin which secure login and protect your website use
 - Then you'll have to enter your website e-mail address, accept <a href="https://safepassword.net/tos-for-websites">SafePassword's terms of service for websites</a> and then click on the **Connect** button.
 - Now all users can enable/disable 'Login with SafePassword' option.
 
-<h2>Users choice</h2>
+<h3>Users choice</h3>
 Each user can **enable/disable** this service from **wp-admin -> Profile page -> 'Login with SafePassword'** section.
 To be able to use SafePassword service the user must be agree with <a href="https://safepassword.net/tos-for-users">SafePassword's terms of service for users</a>.
 
+<h3>No more Bruteforce attacks</h3>
+Every time when a hacker is trying to use a bruteforce attack against your website users the SafePassword's service will block him.
+
+<h3>FAST Support</h3>
+Any time you want a new feature or have a problem please contact us. We will provide you FREE and FAST support.
+
+<h3>HELP your friends</h3>
+Tell to your friends about SafePassword service by sharing on [Facebook](https://www.facebook.com/sharer.php?u=https://wordpress.org/plugins/wp-safepassword/) and [Twitter](https://twitter.com/intent/tweet?url=https://wordpress.org/plugins/wp-safepassword/).
+
+<h3>Do you like our plugin?</h3>
+If you like our plugin and SafePassword's service please leave a [five stars review](https://wordpress.org/support/plugin/wp-safepassword/reviews/#new-post).
 
 <blockquote>
     <p>
