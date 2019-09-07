@@ -37,18 +37,18 @@ Every time when a hacker is trying to use a bruteforce attack against your websi
 
 <h3>FAST Support</h3>
 Any time you want a new feature or have a problem please contact us. We will provide you FREE and FAST support.
+<blockquote>
+    <p>
+	   <a href="https://safepassword.net/documentation">Documentation</a> | 
+	   <a href="https://wordpress.org/support/plugin/wp-safepassword/">Support</a>
+    </p>
+</blockquote>
 
 <h3>HELP your friends</h3>
 Tell to your friends about SafePassword service by sharing on [Facebook](https://www.facebook.com/sharer.php?u=https://wordpress.org/plugins/wp-safepassword/) and [Twitter](https://twitter.com/intent/tweet?url=https://wordpress.org/plugins/wp-safepassword/).
 
 <h3>Do you like our plugin?</h3>
 If you like our plugin and SafePassword's service please leave a [five stars review](https://wordpress.org/support/plugin/wp-safepassword/reviews/#new-post).
-
-<blockquote>
-    <p>
-	   <a href="https://safepassword.net/documentation">Documentation</a>
-    </p>
-</blockquote>
 
 <h3>What is SafePassword.net service</h3>
 
