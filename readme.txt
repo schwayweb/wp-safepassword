@@ -1,7 +1,7 @@
 === WordPress User Login Security - Protected Login with Safe Password ===
 Contributors: Schway
 Donate link: https://safepassword.net/
-Tags: authentication, login, access, secure wp-admin, safepassword, password, protection, safe password, strong password, 2 factory authentication, temporary password, developer access, admin login, temporary login, passwordless login, customer login, secure login, access, admin, log in, login, login security, protection, user login, user login, wordpress admin login, wordpress login, wp-admin, wp-login, password expiration, login, Login Without Password, Login With SafePassword, user, WordPress Admin, wp-admin, developer login
+Tags: authentication, login, access, secure wp-admin, safepassword, password, protection, safe password, strong password, 2 factory authentication, temporary password, developer access, admin login, temporary login, passwordless login, customer login, secure login, access, admin, log in, login, login security, protection, user authentication, user login, wordpress admin login, wordpress login, wp-admin, wp-login, password expiration, login, Login Without Password, Login With SafePassword, user, WordPress Admin, wp-admin, developer login
 Requires at least: 4.0
 Requires PHP: 5.6
 Tested up to: 5.2
