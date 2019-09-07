@@ -13,15 +13,25 @@ SafePassword is WordPress plugin which secure login and protect your website use
 
 == Description ==
 
-**WP SafePassword** will allow your wordpress users to authenticate with **SafePassword**.
-<a href="https://safepassword.net">SafePassword</a> is a FREE service that protect your website users.
+**WordPress User Login Security** will allow your WordPress users and admins to authenticate with **SafePassword.net** service.
+<a href="https://safepassword.net">SafePassword.net</a> is a FREE website security service that protect your website users and admins by hackers against bruteforce attacks.
 
-Practically if you will connect your website to this service your users will not need anymore a password for their accounts.
-They will receive a temporary password on own phone/email when they want to authenticate.(only if they enable 'Login with SafePassword' option)
 
+<h2>Protected and easy to use</h2>
+- You and your users don't need to have a password any more and hackers can't crack your password because the password not exist.
+- SafePassword will generate a temporary strong password and will send it on your phone/email every time you need to login.
+- Once you login in your website, the password auto-destroys.
+- If you write wrong password for 3 times the password is auto-destroys and you would have to request another one.
+
+<h2>One click installation</h2>
+- After the plugin activation, you'll be redirected to the **wp-admin -> SafePassword dashboard**.
+- Then you'll have to enter your website e-mail address, accept <a href="https://safepassword.net/tos-for-websites">SafePassword's terms of service for websites</a> and then click on the **Connect** button.
+- Now all users can enable/disable 'Login with SafePassword' option.
+
+<h2>Users choice</h2>
 Each user can **enable/disable** this service from **wp-admin -> Profile page -> 'Login with SafePassword'** section.
+To be able to use SafePassword service the user must be agree with <a href="https://safepassword.net/tos-for-users">SafePassword's terms of service for users</a>.
 
-**Attention !** For using this plugin you must be agree with <a href="https://safepassword.net/tos-for-users">SafePassword's terms of service</a>. ( including <a href="https://safepassword.net/privacy">Privacy Policy</a> ).
 
 <blockquote>
     <p>
@@ -29,7 +39,7 @@ Each user can **enable/disable** this service from **wp-admin -> Profile page ->
     </p>
 </blockquote>
 
-<h3>What is SafePassword</h3>
+<h3>What is SafePassword.net service</h3>
 
 It’s an authentication system that generates really strong, safe and temporary passwords, example: #B$53f5@.
 - Strong: It would take 9 hours to someone to hack it and the time you have for using it, is only 10 minutes.
@@ -52,7 +62,7 @@ For logging in in your wp-admin dashboard, you just have to go to your website l
 
 == Installation ==
 
-Upload the folder **wp-safepassword** from the zip file to "wp-content/plugins" and activate the plugin in your admin panel or upload **wp-safepassword.zip** in the "Add new" section.
+Upload the folder **wp-safepassword** from the zip file to "wp-content/plugins" and activate the plugin in your admin panel or upload **wp-safepassword.zip** in the **"wp-admin -> Plugins -> Add new"** section.
 
 == Frequently Asked Questions ==
 
