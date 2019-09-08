@@ -19,8 +19,8 @@ SafePassword is WordPress plugin which secure login and protect your website use
 
 <h3>Easy to use</h3>
 - You and your users no longer need a password and hackers can't crack your password because the password not exist.
+- SafePassword will generate a temporary strong password and will send it on your phone/email whenever you need to log in.
 - Once you log in to your website, your password is automatically destroyed.
-- Once you login in your website, the password auto-destroys.
 - If you enter the wrong password 3 times, the password is automatically destroyed and you will need to request another one.
 
 <h3>Quick setup</h3>
