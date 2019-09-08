@@ -13,7 +13,7 @@ SafePassword is WordPress plugin which secure login and protect your website use
 
 == Description ==
 
-**WordPress User Login Security** will allow your WordPress users and admins to authenticate with the **SafePassword.net** service.
+**WP SafePassword Login** will allow your WordPress users and admins to authenticate with the **SafePassword.net** service.
 <a href="https://safepassword.net">SafePassword.net</a> is a **FREE website security service that protect your site users and site administrators from hackers against bruteforce attacks**.
 
 
