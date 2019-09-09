@@ -1,4 +1,4 @@
-=== WP SafePassword Login - Protected Login with Safe Password ===
+=== LoginProtection by SafePassword ===
 Contributors: Schway
 Donate link: https://safepassword.net/
 Tags: login, access, user, password, security, safepassword, protection, authentication, safe password, strong password, 2 factory authentication, temporary password, developer access, admin login, temporary login, passwordless login, customer login, secure login, access, admin, log in, login, login security, protection, user authentication, user login, wordpress admin login, wordpress login, wp-admin, wp-login, password expiration, login, Login Without Password, Login With SafePassword, WordPress Admin, wp-admin, developer login, secure wp-admin
@@ -9,11 +9,11 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-SafePassword is WordPress plugin which secure login and protect your website users & admins by hackers against bruteforce attacks.
+LoginProtection is WordPress plugin which secure login and protect your website users & admins by hackers against bruteforce attacks.
 
 == Description ==
 
-**WP SafePassword Login** will allow your WordPress users and admins to authenticate with the **SafePassword.net** service.
+**LoginProtection** will allow your WordPress users and admins to authenticate with the **SafePassword.net** service.
 <a href="https://safepassword.net">SafePassword.net</a> is a **FREE website security service that protect your site users and site administrators from hackers against bruteforce attacks**.
 
 
