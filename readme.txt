@@ -9,11 +9,11 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-LoginProtection is WordPress plugin which secure login and protect your website users & admins by hackers against bruteforce attacks.
+Login Protection is WordPress plugin which secure login and protect your website users & admins by hackers against bruteforce attacks.
 
 == Description ==
 
-**LoginProtection** will allow your WordPress users and admins to authenticate with the **SafePassword.net** service.
+**Login Protection** will allow your WordPress users and admins to authenticate with the **SafePassword.net** service.
 <a href="https://safepassword.net">SafePassword.net</a> is a **FREE website security service that protect your site users and site administrators from hackers against bruteforce attacks**.
 
 
@@ -25,12 +25,12 @@ LoginProtection is WordPress plugin which secure login and protect your website 
 
 <h3>Quick setup</h3>
 - After the plugin activation, you'll be redirected to the **wp-admin -> SafePassword dashboard**.
-- Next, you'll need to enter your website's email address, accept <a href="https://safepassword.net/tos-for-websites">SafePassword's terms of service for websites</a> and then click on the **Connect** button.
+- Next, you'll need to enter your website's email address, accept <a href="http://bit.ly/2k5XPyW">SafePassword's terms of service for websites</a> and then click on the **Connect** button.
 - Now all users can enable/disable 'Login with SafePassword' option.
 
 <h3>Users choice</h3>
 Each user can **enable/disable** this service from **wp-admin -> Profile page -> 'Login with SafePassword'** section.
-In order to use the SafePassword service, the user must be agree with <a href="https://safepassword.net/tos-for-users">SafePassword's terms of service for users</a>.
+In order to use the SafePassword service, the user must be agree with <a href="http://bit.ly/2k5Yj8e">SafePassword's terms of service for users</a>.
 
 <h3>No Bruteforce attacks</h3>
 Every time a hacker tries to use a bruteforce attack on your site users, SafePassword will block it.
@@ -39,16 +39,16 @@ Every time a hacker tries to use a bruteforce attack on your site users, SafePas
 Whenever you want a new feature or have a problem, please contact us. We will offer you FREE and FAST support.
 <blockquote>
     <p>
-	   <a href="https://safepassword.net/documentation">Documentation</a> | 
-	   <a href="https://wordpress.org/support/plugin/wp-safepassword/">Support</a>
+	   <a href="http://bit.ly/2kft4I8">Documentation</a> | 
+	   <a href="http://bit.ly/2lKw3sj">Support</a>
     </p>
 </blockquote>
 
 <h3>HELP your friends</h3>
-Tell your friends about SafePassword by sharing it on [Facebook](https://www.facebook.com/sharer.php?u=https://wordpress.org/plugins/wp-safepassword/) and [Twitter](https://twitter.com/intent/tweet?url=https://wordpress.org/plugins/wp-safepassword/).
+Tell your friends about SafePassword by sharing it on [Facebook](http://bit.ly/2lPe2Jh) and [Twitter](http://bit.ly/2lKwz9J).
 
 <h3>Do you like our plugin?</h3>
-If you like our plugin and SafePassword's service please leave a [five stars review](https://wordpress.org/support/plugin/wp-safepassword/reviews/#new-post).
+If you like our plugin and SafePassword's service please leave a [five stars review](http://bit.ly/2lFBAQV).
 
 <h3>What is SafePassword.net service</h3>
 
