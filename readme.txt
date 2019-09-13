@@ -13,14 +13,14 @@ Login Protection - Email login and phone login with SafePassword Login Security 
 
 == Description ==
 
-**Login Protection** will allow your WordPress users and admins to authenticate with the **SafePassword.net** service.
-<a href="https://safepassword.net">SafePassword.net</a> is a **FREE website security service that protect your site users and site administrators from hackers against bruteforce attacks**.
+**Login Protection - Email login and phone login** will allow your WordPress users and admins to authenticate with the **SafePassword.net Login Security** service.
+<a href="https://safepassword.net">SafePassword.net Login Security</a> is a **FREE login protection service that protect your site users login and site administrators login from hackers against bruteforce attacks**.
 
 
 <h3>Easy to use</h3>
 - You and your users no longer need a password and hackers can't crack your password because the password not exist.
-- SafePassword will generate a temporary strong password and will send it on your phone/email whenever you need to log in.
-- Once you log in to your website, your password is automatically destroyed.
+- SafePassword Login Security will generate a temporary strong password and will send it on your phone/email whenever you need to login.
+- Once you login to your website, your password is automatically destroyed.
 - If you enter the wrong password 3 times, the password is automatically destroyed and you will need to request another one.
 
 <h3>Quick setup</h3>
@@ -29,7 +29,7 @@ Login Protection - Email login and phone login with SafePassword Login Security 
 - Now all users can enable/disable 'Login with SafePassword' option.
 
 <h3>Users choice</h3>
-Each user can **enable/disable** this service from **wp-admin -> Profile page -> 'Login with SafePassword'** section.
+Each user can **enable/disable** this login service from **wp-admin -> Profile page -> 'Login with SafePassword'** section.
 In order to use the SafePassword service, the user must be agree with <a href="http://bit.ly/2k5Yj8e">SafePassword's terms of service for users</a>.
 
 <h3>No Bruteforce attacks</h3>
