@@ -19,7 +19,7 @@ Login Protection - Email login and phone login with SafePassword Login Security 
 
 <h3>Easy to use</h3>
 - You and your users no longer need a password and hackers can't crack your password because the password not exist.
-- SafePassword Login Security will generate a temporary strong password and will send it on your phone/email whenever you need to login.
+- SafePassword Login Security service will generate a temporary strong password and will send it on your phone/email whenever you need to login.
 - Once you login to your website, your password is automatically destroyed.
 - If you enter the wrong password 3 times, the password is automatically destroyed and you will need to request another one.
 
@@ -45,23 +45,23 @@ Whenever you want a new feature or have a problem, please contact us. We will of
 </blockquote>
 
 <h3>HELP your friends</h3>
-Tell your friends about SafePassword by sharing it on [Facebook](http://bit.ly/2lPe2Jh) and [Twitter](http://bit.ly/2lKwz9J).
+Tell your friends about SafePassword Login Security by sharing it on [Facebook](http://bit.ly/2lPe2Jh) and [Twitter](http://bit.ly/2lKwz9J).
 
 <h3>Do you like our plugin?</h3>
-If you like our plugin and SafePassword's service please leave a [five stars review](http://bit.ly/2lFBAQV).
+If you like our plugin and SafePassword Login Security service please leave a [five stars review](http://bit.ly/2lFBAQV).
 
-<h3>What is SafePassword.net service</h3>
+<h3>What is SafePassword.net Login Security service</h3>
 
 It’s an authentication system that generates really strong, safe and temporary passwords, example: #B$53f5@.
 - Strong: It would take 9 hours to someone to hack it and the time you have for using it, is only 10 minutes.
 - Temporary: Once you log in, the password auto-destroys.
 - Safe: You have 3 tries, after these your password expires and you would have to request another one.
-- Reliable: You don’t need to worry about SafePassword.net shutting down, it’s hosted on Amazon servers.
+- Reliable: You don’t need to worry about SafePassword.net Login Security service shutting down, it’s hosted on Amazon servers.
 
 <h3>How it works</h3>
 
-In the moment that you connect your site with SafePassword.net, everyone (users & admins ) will have the option to choose between logging in with their usual password, or with SafePassword.
-And so, if someone tries to break one of your user’s password, it will be almost impossible, because there will be no more passwords (if logging in with SafePassword is enabled)
+In the moment that you connect your site with SafePassword.net Login Security service, everyone (users & admins ) will have the option to choose between logging in with their usual password, or with SafePassword Login Security.
+And so, if someone tries to break one of your user’s password, it will be almost impossible, because there will be no more passwords (if logging in with SafePassword Login Security is enabled)
 For logging in in your wp-admin dashboard, you just have to go to your website login area and request your SafePassword. As simple as logging in everywhere else.
 
 <h3>Why is it almost impossible to crack a SafePassword?</h3>
