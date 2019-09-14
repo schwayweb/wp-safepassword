@@ -230,13 +230,14 @@ class spcmsResources {
             // Account type Data
             $account_type = $spclasses->option->get('type', $spcms['user_id']);
             
-            // General Data
+            // General Data 
             array_push($js_html,   'window.spsafepwd = [];');
             array_push($js_html,   'var spsafepwd = [];');
             array_push($js_html,   '    spsafepwd["page"] = "'.$spcms['page'].'";');
             array_push($js_html,   '    spsafepwd["server"] = "'.$server.'";');
             array_push($js_html,   '    spsafepwd["status"] = "'.$status.'";');
             array_push($js_html,   '    spsafepwd["api_url"] = "'.$spcms['api_url'].'";');
+            array_push($js_html,   '    spsafepwd["profile_url"] = "'.get_edit_profile_url($spcms['user_id']).'#login-with-safepassword";');
             array_push($js_html,   '    spsafepwd["type"] = "'.$spcms['type'].'";');
             array_push($js_html,   '    spsafepwd["role"] = "'.$spcms['role'].'";');
             array_push($js_html,   '    spsafepwd["support_role"] = "'.$spcms['support_url'].'";');

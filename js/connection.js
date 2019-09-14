@@ -89,7 +89,8 @@
                                           sptext['refresh'],
                                           true);
 
-                        window.location.href = window.location.href;
+                        // Redirect to your profile page
+                        window.location.href = spsafepwd["profile_url"];
                     } else {
                         // Load Step 2
                         spsafepwdConnection.connect('2');

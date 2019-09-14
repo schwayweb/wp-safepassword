@@ -306,7 +306,7 @@ class spcmsMain {
             $started_date = $spclasses->option->get('start_date', $spcms['user_id']);
             $billed = $spclasses->option->get('billed', $spcms['user_id']);
         ?>
-            <h3><?php _e($sptext['login_with_safepassword'], "blank"); ?></h3>
+            <h3 id="login-with-safepassword"><?php _e($sptext['login_with_safepassword'], "blank"); ?></h3>
 
             <table class="form-table bmsp-register">
                 <tr>

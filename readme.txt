@@ -77,7 +77,7 @@ Upload the folder **wp-safepassword** from the zip file to "wp-content/plugins" 
 
 == Frequently Asked Questions ==
 
-- **How to connect with SafePassword ?**
+- **How to connect with SafePassword Login Security service ?**
 
 - After the plugin activation you'll be redirected to the SafePassword dashboard, so that you can finalize the connection.
 You'll have to enter your e-mail address, accept our terms & conditions and then click on the **Connect** button.
@@ -99,6 +99,9 @@ Then click on the Enable button, enter your email, your phone number, select the
 =1.0=
 
 == Changelog ==
+
+= 1.1 =
+* Redirecting to profile page for enabling Login with SafePassword (after the connection has been completed).
 
 = 1.0 =
 * Initial Release.
