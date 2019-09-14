@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP SafePassword
-Version: 1.0
+Version: 1.1
 Plugin URI: https://www.safepassword.net/installation
 Description: Login with SafePassword.
 Author: Schway
