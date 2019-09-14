@@ -4,7 +4,7 @@ Donate link: https://safepassword.net/
 Tags: email login, login, login security, phone login, wordpress login, access, user, password, security, safepassword, protection, authentication, safe password, strong password, 2 factory authentication, temporary password, developer access, admin login, temporary login, passwordless login, customer login, secure login, access, admin, log in, protection, user authentication, user login, wordpress admin login, wp-admin, wp-login, password expiration, Login Without Password, Login With SafePassword, WordPress Admin, wp-admin, developer login, secure wp-admin
 Requires at least: 4.0
 Requires PHP: 5.6
-Tested up to: 5.2.4
+Tested up to: 5.2.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
