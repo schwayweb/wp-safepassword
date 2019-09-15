@@ -18,13 +18,14 @@ Login Protection - Email login and phone login with SafePassword Login Security 
 
 
 <h3>Easy to use</h3>
-[youtube https://youtu.be/0LAUs93oe_c]
+[youtube https://youtu.be/rJqYAwWHqsA]
 - You and your users no longer need a password and hackers can't crack your password because the password not exist.
 - SafePassword Login Security service will generate a temporary strong password and will send it on your phone/email whenever you need to login.
 - Once you login to your website, your password is automatically destroyed.
 - If you enter the wrong password 3 times, the password is automatically destroyed and you will need to request another one.
 
 <h3>Quick setup</h3>
+[youtube https://youtu.be/AShtBWivlLs]
 - After the plugin activation, you'll be redirected to the **wp-admin -> SafePassword dashboard**.
 - Next, you'll need to enter your website's email address, accept <a href="http://bit.ly/2k5XPyW">SafePassword's terms of service for websites</a> and then click on the **Connect** button.
 - Now all users can enable/disable 'Login with SafePassword' option.
