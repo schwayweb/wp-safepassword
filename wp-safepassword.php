@@ -3,7 +3,7 @@
 Plugin Name: WP SafePassword
 Version: 1.1
 Plugin URI: https://www.safepassword.net/installation
-Description: Login with SafePassword.
+Description: Login Protection - Email login and phone login with SafePassword Login Security protect your users login and admin login by hackers against bruteforce attacks.
 Author: SafePassword Login Security
 Author URI: https://www.safepassword.net
 */
